@@ -9,6 +9,10 @@ const COMMANDS = {
     ENTERTAINMENT_NEW: 'entertainment-new',
     TECHNOLOGY_NEW: 'technology-new',
 
+    FIRST_SOCIAL: 'first-new-of-social',
+    FIRST_WORLD: 'first-new-of-world',
+    FIRST_SPORT: 'first-new-of-sport',
+
     READ_NEW: 'read-new', 
     SEARCH_NEW: 'search-new',
     EXIT_ALAN: 'exit-alan'
