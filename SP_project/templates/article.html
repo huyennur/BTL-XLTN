@@ -130,13 +130,13 @@
         
     
 <script language="Javascript">
-    let songs = [
+    let songs_ = [
         {
             name: 'social',
             // path: '/static/musics/Song 1.mp3'
-            // path: "{{ data.speech }}"
-             path: '/Users/dongochuyen/Desktop/SP_project/media/social.mp3'
-             //path: "/Users/dongochuyen/Desktop/SP_project/static/musics/social.mp3"
+            path: "{{ data.speech }}"
+            // path: '/static/musics/social.mp3'
+            // path: "/Users/dongochuyen/Desktop/SP_project/static/musics/social.mp3"
         },
     ]
     var items = $(".focus");
@@ -168,7 +168,7 @@
 
     const setMusic = (i) => {
         seekBar.value = 0;
-        let song = songs[i]
+        let song = songs_[i]
         currentMusic = i;
         music.src = song.path;
 
