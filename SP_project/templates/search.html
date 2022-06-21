@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Search{% endblock %}
+{% block css%}
+<link rel="stylesheet" href="{% static 'css/search.css' %}">
+{% endblock css%} 
+
+{% block content %}
+    <!-- breadcrumb -->
+    <div aria-label="breadcrumb" class="breadcrumb-wrapper">
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs-item"><a href="{% url 'index' %}" class="breadcrumbs-link">Home page</a></li>
+            <li class="breadcrumbs-item"><a href="{% url 'search' %}" class="breadcrumbs-link breadcrumbs-active">Search</a></li>
+        </oul>
+    </div>
+
+    <!-- Tìm kiếm -->
+
+    <div class="search row " style="margin: auto">
+        <div class="search-wrapper col-lg-6 offset-3">
+            <div class="heading">
+                <h4 class="head-news" style="color: #cc2121">Result</h4>
+            </div>
+            <div class="progress" style="height: 2px;">
+                <div class="progress-bar" role="progressbar" style="width: 15%; background-color: #cc2121" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="search-content">
+                <div class="row">
+                    <div class="search-box col-lg-5">
+                        <form method="POST" enctype="multipart/form-data" action="" target="_blank" id="search-input">
+                            {% csrf_token %}
+                            <input type="text" name="searchInput" id="searchInput" placeholder="Tìm kiếm..." class="search-field" display=None>
+                        </form>
+                        <span class="search-btn" id="searchBtn">
+                            <i class="bi bi-search"></i>
+                        </span>
+                    </div>
+                    <div class="talk col-lg-1" id="micBtn">
+                    </div>
+                </div>
+                
+                {% comment %} <form method="POST" enctype="multipart/form-data" action="" target="_blank" id="search-input">
+                    {% csrf_token %}
+                    <input type="text" name="searchInput" id="searchInput" placeholder="Tìm kiếm..." class="search-field" display=None>
+                </form>
+                <span class="search-btn" id="searchBtn">
+                    <i class="bi bi-search"></i>
+                </span> {% endcomment %}
+                
+                {% comment %} <div class="search-box">
+                    <form method="POST" enctype="multipart/form-data" action="" target="_blank" id="search-input">
+                        {% csrf_token %}
+                        <input type="text" name="searchInput" id="searchInput" placeholder="Tìm kiếm..." class="search-field" display=None>
+                    </form>
+                    <span class="search-btn" id="searchBtn">
+                        <i class="bi bi-search"></i>
+                    </span>
+                </div> {% endcomment %}
+                <div class="result" id="news-containter">
+                    {% if news is None %}
+                        <p>{{msg}}</p>
+                    {% else %}
+                        <p>Having {{msg}} finding result</p>
+                        {% for new in news %}
+                            <div class=" block-1 row">
+                                <div class="img-container col-lg-4">
+                                    <img src="https://icdn.dantri.com.vn/2022/05/31/anh-3-1653965931262.jpeg" alt="">
+                                </div>
+                                <div class="title col-lg-8">
+                                    <h6>
+                                        <a href="#">
+                                            {{new.header}}
+                                        </a>
+                                    </h6>
+                                    <div class="date">
+                                        <i class="bi bi-calendar"></i>
+                                        <span>June 21, 2022</span>
+                                    </div>
+                                    <div class="read">
+                                        <a href="#">Readmore >></a>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                    
+            
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+{% block js %}
+<script src="{% static 'js/app.js' %}"></script>
+        
+
+        <script>
+            var items = $(".focus");
+            items.on("click",function(){
+                items.removeClass("active");
+                $(this).toggleClass("active");
+            });
+            
+        </script>
+{% endblock %}

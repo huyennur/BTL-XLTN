@@ -1,0 +1,185 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Social{% endblock %}
+{% block css%}
+<link rel="stylesheet" href="{% static 'css/social.css' %}">
+{% endblock css%} 
+
+{% block content %}
+    <!-- breadcrumb -->
+    <div aria-label="breadcrumb" class="breadcrumb-wrapper">
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs-item"><a href="{% url 'index' %}" class="breadcrumbs-link">Home page</a></li>
+            <li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link breadcrumbs-active">{{category}}</a></li>
+        </oul>
+    </div>
+
+    <!-- Xã hội và tiêu điểm -->
+
+    <div class="soc-and-focus row " style="margin: auto">
+        <div class="main-social-wrapper col-lg-8">
+            <div class="heading">
+                <h4 class="head-news" style="color: #cc2121">{{category}}</h4>
+            </div>
+            <div class="progress" style="height: 2px;">
+                <div class="progress-bar" role="progressbar" style="width: 15%; background-color: #cc2121" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            {% if news %}
+            <div class="main-social-content">
+                <div class="main-social-top">
+                    <div class="card">
+                        <a class="card-img" href="https://vnexpress.net/wto-mien-tru-ban-quyen-vaccine-covid-19-trong-5-nam-4477533.html"><img class="left-img" src="https://i1-vnexpress.vnecdn.net/2022/06/19/VNE-Build-1537-1655607784.jpg?w=0&h=0&q=100&dpr=2&fit=crop&s=r5gjnVkCXj1pfW3T7gWyhQ" alt=""></a>
+                        <div class="card-img-overlay">
+                            <h2 class="card-title left-title">
+                                <a href="{% url 'article' news.0.pk %}">
+                                    {{news.0.header}}
+                                </a>
+                            </h2>
+                            <div class="date1">
+                                <i class="bi bi-calendar card-text"></i>
+                                <span class="card-text">June 21, 2022</span>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+                {% else %}
+                {% endif %}
+                <div class="divider"></div>
+                <div class="main-social-bottom row">
+                    {% if news.1 %}
+                    <div class="left col-lg-6">
+                        <div class="block-2 first row">
+                            <div class="img-container col-lg-6">
+                                <a href="https://dantri.com.vn/xa-hoi/nang-nong-nhu-do-lua-nguoi-ha-noi-ha-nhiet-duoi-gam-cau-goc-cay-20220619152043157.htm"><img src="https://icdn.dantri.com.vn/2022/05/31/anh-3-1653965931262.jpeg" alt=""></a>
+                            </div>
+                            <div class="title col-lg-6">
+                                <h5>
+                                    <a href="https://dantri.com.vn/xa-hoi/nang-nong-nhu-do-lua-nguoi-ha-noi-ha-nhiet-duoi-gam-cau-goc-cay-20220619152043157.htm">
+                                        {{news.1.header}}
+                                    </a>
+                                </h5>
+                                <div class="date">
+                                    <i class="bi bi-calendar"></i>
+                                    <span>June 21, 2022</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if news.2 %}
+                    <div class="right col-lg-6">
+                        <div class="block-2 first row">
+                            <div class="img-container col-lg-6">
+                                <a href="https://dantri.com.vn/xa-hoi/nang-nong-nhu-do-lua-nguoi-ha-noi-ha-nhiet-duoi-gam-cau-goc-cay-20220619152043157.htm"><img src="https://icdn.dantri.com.vn/2022/05/31/anh-3-1653965931262.jpeg" alt=""></a>
+                            </div>
+                            <div class="title col-lg-6">
+                                <h5>
+                                    <a href="https://dantri.com.vn/xa-hoi/nang-nong-nhu-do-lua-nguoi-ha-noi-ha-nhiet-duoi-gam-cau-goc-cay-20220619152043157.htm">
+                                        {{news.2.header}}
+                                    </a>
+                                </h5>
+                                <div class="date">
+                                    <i class="bi bi-calendar"></i>
+                                    <span>June 21, 2022</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="focus-wrapper col-lg-4">
+            <div class="heading">
+                <h4 class="head-news" style="color: #cc2121">Main point</h4>
+            </div>
+            <div class="progress" style="height: 2px;">
+                <div class="progress-bar" role="progressbar" style="width: 35%; background-color: #cc2121" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="focus-content">
+                <div class=" block-1 first row">
+                    <div class="img-container col-lg-4">
+                        <img src="https://ichef.bbci.co.uk/onesport/cps/800/cpsprodpb/15C12/production/_125460198_gettyimages-1240722257.jpg" alt="">
+                    </div>
+                    <div class="title col-lg-8">
+                        <h6>
+                            Fabio Vieira: What can Gunners fans expect after agreeing deal for Porto midfielder?
+                        </h6>
+                        <div class="date">
+                            <i class="bi bi-calendar"></i>
+                            <span>June 21, 2022</span>
+                        </div>
+                        <div class="read">
+                            <a href="https://www.bbc.com/sport/football/61841060">Read more >></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="second row block-1">
+                    <div class="img-container col-lg-4">
+                        <img src="https://ichef.bbci.co.uk/onesport/cps/800/cpsprodpb/977C/production/_125308783_nz_getty_21.jpg" alt="">
+                    </div>
+                    <div class="title col-lg-8">
+                        <h6>
+                            England v New Zealand: The five factors behind Kiwis' Test transformation
+                        </h6>
+                        <div class="date">
+                            <i class="bi bi-calendar"></i>
+                            <span>June 21, 2022</span>
+                        </div>
+                        <div class="read">
+                            <a href="https://www.bbc.com/sport/cricket/61710540">Read more >></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="third row block-1">
+                    <div class="img-container col-lg-4">
+                        <img src="https://ichef.bbci.co.uk/onesport/cps/800/cpsprodpb/167E7/production/_125553129_jacklaugher.jpg" alt="">
+                    </div>
+                    <div class="title col-lg-8">
+                        <h6>
+                            Commonwealth Games: England name diving squad but Olympic gold medallist Tom Daley not included
+                        </h6>
+                        <div class="date">
+                            <i class="bi bi-calendar"></i>
+                            <span>June 21, 2022</span>
+                        </div>
+                        <div class="read">
+                            <a href="https://www.bbc.com/sport/diving/61877341">Read more >></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row text">
+                    <h6><a href="https://www.bbc.com/news/world-latin-america-61863885">Gustavo Petro and Francia Márquez: A new era for Colombia</a></h6>
+                    <p>"What is coming here is real change, real change," Colombia's new President-elect, Gustavo Petro, promised his cheering supporters at his victory speech on Sunday night...</p>
+                </div>
+                <div class="row text">
+                    <h6><a href="https://www.bbc.com/news/world-africa-61631437">Ghana's Pan African Heritage Museum seeks to reclaim Africa's history</a></h6>
+                    <p>In our series of letters from African writers, media consultant and trainer Joseph Warungu writes about plans to build a huge museum in Ghana to reflect the history and heritage of Africans...</p>
+                </div>
+                <div class="row text">
+                    <h6><a href="https://www.bbc.com/news/world-europe-61875391">Russian journalist Dmitry Muratov auctions Nobel medal for $103m</a></h6>
+                    <p>The Russian editor-in-chief of the independent newspaper Novaya Gazeta has auctioned off his Nobel Peace Prize medal for $103.5m (£84m)...</p>
+                </div>
+                <div class="row text">
+                    <h6><a href="https://www.bbc.com/news/world-us-canada-61877914">Uvalde shooting: Photos show armed police waiting in school hallway</a></h6>
+                    <p>Police arrived earlier in the attack and with more firepower than previously reported, according to US media who have seen investigative documents....</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+
+    <script>
+        var items = $(".focus");
+        items.on("click",function(){
+            items.removeClass("active");
+            $(this).toggleClass("active");
+        });
+        
+    </script>
+{% endblock %}

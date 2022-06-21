@@ -1,0 +1,335 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home page{% endblock %}
+{% block css%}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock css%} 
+
+{% block content %}
+
+    <!-- Nổi bật -->
+
+    <div class="feature-wrapper">
+        <div class="heading">
+            <h4 class="head-news" style="color: #cc2121">Feature</h4>
+        </div>
+        <div class="progress" style="height: 2px;">
+            <div class="progress-bar" role="progressbar" style="width: 10%; background-color: #cc2121" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="feature-content row">
+            <div class="col-lg-6 left-content">
+                <div class="card">
+                    <a class="card-img" href="https://www.bbc.com/news/business-61861849"><img class="left-img" src="https://i1-vnexpress.vnecdn.net/2022/06/19/VNE-Build-1537-1655607784.jpg?w=0&h=0&q=100&dpr=2&fit=crop&s=r5gjnVkCXj1pfW3T7gWyhQ" alt=""></a>
+                    <div class="card-img-overlay">
+                        <h2 class="card-title left-title">
+                            <a href="https://www.bbc.com/news/business-61861849">
+                                Ukraine war: Russia becomes China's biggest oil supplier
+                            </a>
+                        </h2>
+                        <div class="date1">
+                            <i class="bi bi-calendar card-text"></i>
+                            <span class="card-text">June 20, 2022</span>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 row">
+                <div class="col-lg-12 p-0">
+                    <div class="card">
+                        <a class="card-img" href="https://www.bbc.com/news/61836019"><img class="topright-img" src="https://i1-vnexpress.vnecdn.net/2022/06/19/VNE-Build-1537-1655607784.jpg?w=0&h=0&q=100&dpr=2&fit=crop&s=r5gjnVkCXj1pfW3T7gWyhQ" alt=""></a>
+                        <div class="card-img-overlay">
+                            <h4 class="card-title topright-title">
+                                <a href="https://www.bbc.com/news/61836019">
+                                    Thailand cannabis: From a war on drugs to weed curries
+                                </a>
+                            </h4>
+                            <div class="date2">
+                                <i class="bi bi-calendar card-text"></i>
+                                <span class="card-text">June 21, 2022</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 p-0">
+                    <div class="card">
+                        <a class="card-img" href="https://vnexpress.net/wto-mien-tru-ban-quyen-vaccine-covid-19-trong-5-nam-4477533.html"><img class="botright1-img" src="https://i1-vnexpress.vnecdn.net/2022/06/19/VNE-Build-1537-1655607784.jpg?w=0&h=0&q=100&dpr=2&fit=crop&s=r5gjnVkCXj1pfW3T7gWyhQ" alt=""></a>
+                        <div class="card-img-overlay">
+                            <h5 class="card-title botright-title">
+                                <a href="https://vnexpress.net/wto-mien-tru-ban-quyen-vaccine-covid-19-trong-5-nam-4477533.html">
+                                    BBC Africa Eye expose: Chinese man held over racist videos
+                                </a>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 p-0">
+                    <div class="card">
+                        <a class="card-img" href="https://www.bbc.com/news/world-europe-61874751"><img class="botright2-img" src="https://i1-vnexpress.vnecdn.net/2022/06/19/VNE-Build-1537-1655607784.jpg?w=0&h=0&q=100&dpr=2&fit=crop&s=r5gjnVkCXj1pfW3T7gWyhQ" alt=""></a>
+                        <div class="card-img-overlay">
+                            <h5 class="card-title botright-title">
+                                <a href="https://www.bbc.com/news/world-europe-61874751">
+                                    France elections: Macron rejects prime minister's offer to resign
+                                </a>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Xã hội và Pháp luật -->
+
+    <div class="soc-and-law row " style="margin: auto">
+        <div class="social-wrapper col-lg-8">
+            <div class="heading">
+                <h4 class="head-news" style="color: #cc2121">Social</h4>
+            </div>
+            <div class="progress" style="height: 2px;">
+                <div class="progress-bar" role="progressbar" style="width: 15%; background-color: #cc2121" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="social-content">
+                <div class="social-top">
+                    <a href="https://www.bbc.com/news/world-asia-india-61862035"><img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/14572/production/_125541338_floodassam.jpg" alt=""></a>
+                    <div class="title">
+                        <h4 class="">
+                            <a href="https://www.bbc.com/news/world-asia-india-61862035">
+                                Assam: India floods destroy millions of homes and dreams
+                            </a>
+                        </h4>
+                        <div class="date">
+                            <i class="bi bi-calendar"></i>
+                            <span>June 21, 2022</span>
+                        </div>
+                        <div class="des">
+                            Floods in Assam have killed at least 45 and displaced more than 4.7 million people...
+                        </div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="social-bottom">
+                    <div class="block first row">
+                        <div class="img-container col-lg-4">
+                            <a href="https://www.bbc.com/news/world-us-canada-61877914"><img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/15347/production/_125555868_uvaldepleasework.png" alt=""></a>
+                        </div>
+                        <div class="title col-lg-8">
+                            <h5>
+                                <a href="https://www.bbc.com/news/world-us-canada-61877914">
+                                    Uvalde shooting: Photos show armed police waiting in school hallway
+                                </a>
+                            </h5>
+                            <div class="date">
+                                <i class="bi bi-calendar"></i>
+                                <span>June 21, 2022</span>
+                            </div>
+                            <div class="des">
+                                Police arrived earlier in the attack and with more firepower than previously reported, according to US media who have seen investigative documents....
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block second row">
+                        <div class="img-container col-lg-4">
+                            <a href="https://www.bbc.com/news/world-us-canada-61613177"><img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/1725F/production/_124951849_mediaitem124951847.jpg" alt=""></a>
+                        </div>
+                        <div class="title col-lg-8">
+                            <h5>
+                                <a href="https://www.bbc.com/news/world-us-canada-61613177">
+                                    Uvalde shooting: Texas shooting response was wrong, says official
+                                </a>
+                            </h5>
+                            <div class="date">
+                                <i class="bi bi-calendar"></i>
+                                <span>June 21, 2022</span>
+                            </div>
+                            <div class="des">
+                                Police made the "wrong decision" by failing to storm a primary school classroom in Uvalde, Texas, as a gunman killed 19 children inside, the top safety official has said...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block third row">
+                        <div class="img-container col-lg-4">
+                            <a href="https://www.bbc.com/news/technology-61880709"><img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/14B1D/production/_125556748_gettyimages-1240422158.jpg" alt=""></a>
+                        </div>
+                        <div class="title col-lg-8">
+                            <h5>
+                                <a href="https://dantri.com.vn/xa-hoi/nang-nong-nhu-do-lua-nguoi-ha-noi-ha-nhiet-duoi-gam-cau-goc-cay-20220619152043157.htm">
+                                    HElon Musk: Billionaire's daughter cuts ties with her father
+                                </a>
+                            </h5>
+                            <div class="date">
+                                <i class="bi bi-calendar"></i>
+                                <span>June 21, 2022</span>
+                            </div>
+                            <div class="des">
+                                Elon Musk's transgender daughter has applied to legally change her name and gender, saying she no longer wants to "be related to my biological father in any way, shape or form"...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="law-wrapper col-lg-4">
+            <div class="heading">
+                <h4 class="head-news" style="color: #cc2121">Sport</h4>
+            </div>
+            <div class="progress" style="height: 2px;">
+                <div class="progress-bar" role="progressbar" style="width: 35%; background-color: #cc2121" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="law-content">
+                <div class=" block-1 first row">
+                    <div class="img-container col-lg-4">
+                        <img src="https://ichef.bbci.co.uk/onesport/cps/800/cpsprodpb/9D5D/production/_125558204_brookskoepka_getty-2.jpg" alt="">
+                    </div>
+                    <div class="title col-lg-8">
+                        <h6>
+                            Brooks Koepka set to quit PGA Tour and join LIV Golf series
+                        </h6>
+                        <div class="date">
+                            <i class="bi bi-calendar"></i>
+                            <span>June 21, 2022</span>
+                        </div>
+                        <div class="read">
+                            <a href="#">Read more >></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="second row block-1">
+                    <div class="img-container col-lg-4">
+                        <img src="https://ichef.bbci.co.uk/onesport/cps/800/cpsprodpb/15C12/production/_125460198_gettyimages-1240722257.jpg" alt="">
+                    </div>
+                    <div class="title col-lg-8">
+                        <h6>
+                            Fabio Vieira: What can Gunners fans expect after agreeing deal for Porto midfielder?
+                        </h6>
+                        <div class="date">
+                            <i class="bi bi-calendar"></i>
+                            <span>June 21, 2022</span>
+                        </div>
+                        <div class="read">
+                            <a href="#">Read more >></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="third row block-1">
+                    <div class="img-container col-lg-4">
+                        <img src="https://ichef.bbci.co.uk/onesport/cps/800/cpsprodpb/977C/production/_125308783_nz_getty_21.jpg" alt="">
+                    </div>
+                    <div class="title col-lg-8">
+                        <h6>
+                            England v New Zealand: The five factors behind Kiwis' Test transformation
+                        </h6>
+                        <div class="date">
+                            <i class="bi bi-calendar"></i>
+                            <span>June 21, 2022</span>
+                        </div>
+                        <div class="read">
+                            <a href="#">Read more >></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="fourth row block-1">
+                    <div class="img-container col-lg-4">
+                        <img src="https://ichef.bbci.co.uk/onesport/cps/800/cpsprodpb/167E7/production/_125553129_jacklaugher.jpg" alt="">
+                    </div>
+                    <div class="title col-lg-8">
+                        <h6>
+                            Commonwealth Games: England name diving squad but Olympic gold medallist Tom Daley not included
+                        </h6>
+                        <div class="date">
+                            <i class="bi bi-calendar"></i>
+                            <span>June 21, 2022</span>
+                        </div>
+                        <div class="read">
+                            <a href="#">Read more >></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thế giới -->
+
+    <div class="world-wrapper">
+        <div class="heading">
+            <h4 class="head-news" style="color: #cc2121">World</h4>
+        </div>
+        <div class="progress" style="height: 2px;">
+            <div class="progress-bar" role="progressbar" style="width: 10%; background-color: #cc2121" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="world-content row">
+            <div class="col-lg-4 block-2">
+                <a href="https://www.bbc.com/news/world-latin-america-61863885"><img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/122A4/production/_125540447_colombia1.jpg" alt=""></a>
+                <div class="title">
+                    <h5 class="">
+                        <a href="https://www.bbc.com/news/world-latin-america-61863885">
+                            Gustavo Petro and Francia Márquez: A new era for Colombia
+                        </a>
+                    </h5>
+                    <div class="date">
+                        <i class="bi bi-calendar"></i>
+                        <span>June 20, 2022</span>
+                    </div>
+                    <div class="des">
+                        "What is coming here is real change, real change," Colombia's new President-elect, Gustavo Petro, promised his cheering supporters at his victory speech on Sunday night...
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 block-2">
+                <a href="https://www.bbc.com/news/world-africa-61631437"><img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/8FBF/production/_125399763_7b6963b0-154e-46c9-8272-ffeb51f46a50.jpg" alt=""></a>
+                <div class="title">
+                    <h5 class="">
+                        <a href="https://dantri.com.vn/the-gioi/nga-phong-ten-lua-tu-bien-nhieu-tuong-linh-va-si-quan-ukraine-thiet-mang-20220619204248572.htm">
+                            Ghana's Pan African Heritage Museum seeks to reclaim Africa's history
+                        </a>
+                    </h5>
+                    <div class="date">
+                        <i class="bi bi-calendar"></i>
+                        <span>June 20, 2022</span>
+                    </div>
+                    <div class="des">
+                        In our series of letters from African writers, media consultant and trainer Joseph Warungu writes about plans to build a huge museum in Ghana to reflect the history and heritage of Africans...
+                </div>
+            </div>
+            {% comment %} <div class="col-lg-4 block-2">
+                <a href="https://www.bbc.com/news/world-europe-61875391"><img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/D6E7/production/_125551055_6078f6fc-47b5-4f0a-b8b6-270deeaa9d65.jpg" alt=""></a>
+                <div class="title">
+                    <h5 class="">
+                        <a href="https://www.bbc.com/news/world-europe-61875391">
+                            Russian journalist Dmitry Muratov auctions Nobel medal for $103m
+                        </a>
+                    </h5>
+                    <div class="date">
+                        <i class="bi bi-calendar"></i>
+                        <span>June 20, 2022</span>
+                    </div>
+                    <div class="des">
+                        The Russian editor-in-chief of the independent newspaper Novaya Gazeta has auctioned off his Nobel Peace Prize medal for $103.5m (£84m)...
+                    </div>
+                </div>
+            </div> {% endcomment %}
+        </div>
+    </div>
+
+    <!-- Play nhạc-->
+    {% comment %} <div class="music-player row" style="margin: auto">
+        <h5 class="music-name"></h5>
+        <div class="col-lg-4">
+            <div class="song-slider">
+                <input type="range" value="0" class="seek-bar">
+                <span class="current-time">00:00</span>
+                <span class="song-duration">00:00</span>
+            </div>
+
+            <div class="controls">
+                <button class="play-btn pause">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </div> {% endcomment %}
+{% endblock %}
+

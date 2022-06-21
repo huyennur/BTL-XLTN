@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>News app</title>
+  </head>
+
+  <body>
+    {% load static %}
+    <div class="alan-btn"></div>
+    <a href="{% url 'firstnew' %}">First new</a>
+    <!-- {% for title, description, image, url in news %}
+        <img src="{{ image }}", alt="news" />
+        <a href="{{ url }}">{{ title }}</a>
+        <p>{{ description }}</p>
+    {% endfor %} -->
+
+    <script type="text/javascript" src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+
+    <script src="{% static 'js/alan.js' %}"></script>
+
+
+  </body>
+</html>
+
+
