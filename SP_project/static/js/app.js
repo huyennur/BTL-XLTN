@@ -55,13 +55,13 @@ if (SpeechRecognition) {
         const transcript = event.results[current][0].transcript;
         console.log(transcript);
 
-        if (transcript.toLowerCase().trim() === "stop recording") {
+        if (transcript.toLowerCase().trim() === "stop") {
             recognition.stop();
         } else if (!searchForm.value) {
             searchForm.value = transcript;
         } else {
             if (transcript.toLowerCase().trim() === "go") {
-                // searchForm.submit();
+                //searchForm.submit();
             } else if (transcript.toLowerCase().trim() === "reset input") {
                 searchFormInput.value = "";
             } else {

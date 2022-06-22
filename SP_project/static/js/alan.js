@@ -15,6 +15,7 @@ const COMMANDS = {
 
     READ_NEW: 'read-new', 
     SEARCH_NEW: 'search-new',
+    START_SEARCH: 'start-search',
     EXIT_ALAN: 'exit-alan'
 }
 
@@ -48,6 +49,9 @@ var alanBtnInstance = alanBtn({
         window.location.href ="http://127.0.0.1:8000/article/3";
     } else if (commandData.command === "search-new") {
         window.location.href ="http://127.0.0.1:8000/search/";
+    } else if (commandData.command === "start-search") {
+        window.location.href ="http://127.0.0.1:8000/search/";
+        micBtnClick()
     } else if (commandData.command === "exit-alan") {
         alanBtnInstance.playText("Goodbye")
         alanBtnInstance.deactivate();

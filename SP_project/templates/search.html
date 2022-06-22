@@ -61,7 +61,7 @@
                     {% if news is None %}
                         <p>{{msg}}</p>
                     {% else %}
-                        <p>Having {{msg}} finding result</p>
+                        <p id="search-result">Having found {{msg}} result</p>
                         {% for new in news %}
                             <div class=" block-1 row">
                                 <div class="img-container col-lg-4">
